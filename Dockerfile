@@ -1,0 +1,34 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY /UmbracoContainer/*.csproj ./
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /sources
+
+# Copy everything else and build website
+COPY /UmbracoContainer/*.csproj .
+
+COPY /UmbracoContainer/appsettings.json .
+COPY /UmbracoContainer/Program.cs .
+COPY /UmbracoContainer/Startup.cs .
+
+#COPY /UmbracoContainer/App_Plugins ./App_Plugins
+COPY /UmbracoContainer/Properties ./Properties
+COPY /UmbracoContainer/umbraco ./umbraco
+COPY /UmbracoContainer/Views ./Views
+COPY /UmbracoContainer/wwwroot ./wwwroot
+
+# Build umbraco
+RUN dotnet restore
+RUN dotnet publish -c release -o /output --no-restore
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
+WORKDIR /output
+COPY --from=build /output ./
+
+# Copy the wait-for-it.sh script as an mssql prerequisite
+COPY wait-for-it.sh /wait-for-it.sh
+RUN chmod +x /wait-for-it.sh
+
+ENTRYPOINT ["dotnet", "UmbracoContainer.dll"]
