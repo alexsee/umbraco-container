@@ -17,7 +17,7 @@ COPY /UmbracoContainer/Startup.cs .
 COPY /UmbracoContainer/Properties ./Properties
 COPY /UmbracoContainer/umbraco ./umbraco
 COPY /UmbracoContainer/Views ./Views
-COPY /UmbracoContainer/wwwroot ./wwwroot
+#COPY /UmbracoContainer/wwwroot ./wwwroot
 
 # Build umbraco
 RUN dotnet restore
