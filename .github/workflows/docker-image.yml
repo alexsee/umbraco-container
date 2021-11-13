@@ -25,10 +25,7 @@ jobs:
       uses: docker/metadata-action@v3
       with:
         # list of Docker images to use as base name for tags
-        images: |
-          alexsee/umbraco-container
-          ghcr.io/alexsee/umbraco-container
-        # generate Docker tags based on the following events/attributes
+        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         tags: |
           type=schedule
           type=ref,event=branch
