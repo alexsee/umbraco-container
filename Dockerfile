@@ -1,8 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
-WORKDIR /app
-
 # Copy csproj and restore as distinct layers
-COPY /UmbracoContainer/*.csproj ./
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /sources
 
@@ -18,6 +14,7 @@ COPY /UmbracoContainer/Views ./Views
 
 # Build umbraco
 RUN dotnet restore
+RUN dotnet build
 RUN dotnet publish -c release -o /output --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
