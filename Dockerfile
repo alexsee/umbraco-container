@@ -13,11 +13,8 @@ COPY /UmbracoContainer/appsettings.json .
 COPY /UmbracoContainer/Program.cs .
 COPY /UmbracoContainer/Startup.cs .
 
-#COPY /UmbracoContainer/App_Plugins ./App_Plugins
 COPY /UmbracoContainer/Properties ./Properties
-COPY /UmbracoContainer/umbraco ./umbraco
 COPY /UmbracoContainer/Views ./Views
-#COPY /UmbracoContainer/wwwroot ./wwwroot
 
 # Build umbraco
 RUN dotnet restore
