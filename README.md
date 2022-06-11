@@ -1,6 +1,7 @@
 # Umbraco 9 Docker Image &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE.md) [![Docker Image CI](https://github.com/alexsee/umbraco-container/actions/workflows/docker-image.yml/badge.svg)](https://github.com/alexsee/umbraco-container/actions/workflows/docker-image.yml)
 
 This repository provides a simple Umbraco project template with build scripts for docker images.
+You can run your Umbraco instance as a docker container with easy upgrade capabilities (i.e., just exchange the image).
 
 ## Additional installed packages
 * uSync Complete Edition
