@@ -14,11 +14,11 @@
 	</ItemGroup>
 	
     <ItemGroup>
-        <PackageReference Include="uSync" Version="10.2.0" />
+        <PackageReference Include="uSync" Version="10.2.1" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="10.2.0" />
+        <PackageReference Include="Umbraco.Cms" Version="10.2.1" />
     </ItemGroup>
 
 
