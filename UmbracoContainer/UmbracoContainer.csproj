@@ -12,15 +12,10 @@
 		<PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
 		<RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2" />
 	</ItemGroup>
-	
-    <ItemGroup>
-        <PackageReference Include="uSync" Version="10.3.0" />
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Umbraco.Cms" Version="10.3.2" />
         <PackageReference Include="uSync.Complete" Version="10.3.0" />
-        <PackageReference Include="uSync.PeopleEdition" Version="10.3.0" />
     </ItemGroup>
 
 
