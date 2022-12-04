@@ -1,4 +1,4 @@
-# Umbraco 10 Docker Image &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE.md) [![Docker Image CI](https://github.com/alexsee/umbraco-container/actions/workflows/docker-image.yml/badge.svg)](https://github.com/alexsee/umbraco-container/actions/workflows/docker-image.yml)
+# Umbraco 11 Docker Image &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE.md) [![Docker Image CI](https://github.com/alexsee/umbraco-container/actions/workflows/docker-image.yml/badge.svg)](https://github.com/alexsee/umbraco-container/actions/workflows/docker-image.yml)
 
 This repository provides a simple Umbraco project template with build scripts for docker images.
 You can run your Umbraco instance as a docker container with easy upgrade capabilities (i.e., just exchange the image).
@@ -15,7 +15,7 @@ services:
     container_name: my-umbraco-container
     image: ghcr.io/alexsee/umbraco-container:latest
     restart: always
-    entrypoint: ["/wait-for-it.sh", "host.docker.internal:1433", "-t", "120", "--", "dotnet", "UmbracoContainer.dll", "--urls", "http://0.0.0.0"]
+    entrypoint: ["dotnet", "UmbracoContainer.dll", "--urls", "http://0.0.0.0"]
     ports:
       - "80:80"
     volumes:
