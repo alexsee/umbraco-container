@@ -26,3 +26,5 @@ services:
       - ./wwwroot:/output/wwwroot
       - ./appsettings.json:/output/appsettings.json
 ```
+
+**Note**: The docker-compose example maps the entire `wwwroot` folder to a local folder / docker volume. This can lead to issues since the container will also contain important files for Umbraco to work under this folder. Therefore, only include additional folders and files here such as the `css`, `media`, or `scripts` folders separately.
