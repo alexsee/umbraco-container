@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
@@ -14,7 +14,7 @@
 	</ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="11.2.1" />
+        <PackageReference Include="Umbraco.Cms" Version="11.2.2" />
         <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="11.2.1" />
         <PackageReference Include="uSync.Complete" Version="11.0.2" />
     </ItemGroup>
