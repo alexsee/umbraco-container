@@ -19,12 +19,14 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./App_Plugins:/output/App_Plugins
       - ./Logs:/output/umbraco/Logs
       - ./uSync:/output/uSync
       - ./Views:/output/Views
-      - ./wwwroot:/output/wwwroot
+      - ./wwwroot/css:/output/wwwroot/css
+      - ./wwwroot/fonts:/output/wwwroot/fonts
+      - ./wwwroot/media:/output/wwwroot/media
       - ./appsettings.json:/output/appsettings.json
+      - ./Data:/output/umbraco/Data
 ```
 
-**Note**: The docker-compose example maps the entire `wwwroot` folder to a local folder / docker volume. This can lead to issues since the container will also contain important files for Umbraco to work under this folder. Therefore, only include additional folders and files here such as the `css`, `media`, or `scripts` folders separately.
+**Note**: The docker-compose example maps the relevant subfolders of `wwwroot` to a local folder / docker volume individually. If you include the entire `wwwroot` directory, this can lead to upgrade issues since the container image itself contains the `wwwroot/umbraco` directory. Therefore, only include additional folders and files here such as the `css`, `media`, or `scripts` folders separately.
