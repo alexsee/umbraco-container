@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <DefaultItemExcludes>$(DefaultItemExcludes);App_Plugins/**;</DefaultItemExcludes>
         <DefaultItemExcludes>$(DefaultItemExcludes);umbraco/**;</DefaultItemExcludes>
         <DefaultItemExcludes>$(DefaultItemExcludes);wwwroot/media/**;</DefaultItemExcludes>
@@ -14,9 +14,9 @@
 	</ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="12.3.4" />
-        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="12.3.5" />
-        <PackageReference Include="uSync.Complete" Version="12.2.1.1" />
+        <PackageReference Include="Umbraco.Cms" Version="13.0.2" />
+        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="13.0.2" />
+        <PackageReference Include="uSync.Complete" Version="13.0.0" />
     </ItemGroup>
 
 
