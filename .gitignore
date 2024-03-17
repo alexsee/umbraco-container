@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/UmbracoContainer
+/output
+/UmbracoContainer/uSync/v9
+/UmbracoContainer/Views
+/UmbracoContainer/umbraco/Data
