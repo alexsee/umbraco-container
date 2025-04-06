@@ -66,7 +66,6 @@ namespace UmbracoContainer
                 })
                 .WithEndpoints(u =>
                 {
-                    u.UseInstallerEndpoints();
                     u.UseBackOfficeEndpoints();
                     u.UseWebsiteEndpoints();
                 });

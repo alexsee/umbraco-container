@@ -14,11 +14,11 @@
 	</ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="13.7.1" />
-        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="13.7.1" />
-        <PackageReference Include="uSync.Complete" Version="13.1.6" />
-        <PackageReference Include="Skybrud.Umbraco.Redirects" Version="13.0.7" />
-        <PackageReference Include="Skybrud.Umbraco.Redirects.Import" Version="13.0.0" />
+        <PackageReference Include="Umbraco.Cms" Version="14.3.3" />
+        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="14.3.3" />
+        <PackageReference Include="uSync" Version="14.2.3" />
+        <PackageReference Include="uSync.Complete" Version="14.2.0" />
+        <PackageReference Include="Skybrud.Umbraco.Redirects" Version="14.0.0-beta001" />
     </ItemGroup>
 
 
