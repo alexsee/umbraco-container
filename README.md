@@ -5,6 +5,7 @@ You can run your Umbraco instance as a docker container with easy upgrade capabi
 
 ## Additional installed packages
 * uSync
+* Skybrud.Umbraco.Redirects
 
 ## Example docker-compose.yml
 ```
