@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <DefaultItemExcludes>$(DefaultItemExcludes);App_Plugins/**;</DefaultItemExcludes>
         <DefaultItemExcludes>$(DefaultItemExcludes);umbraco/**;</DefaultItemExcludes>
         <DefaultItemExcludes>$(DefaultItemExcludes);wwwroot/media/**;</DefaultItemExcludes>
@@ -14,11 +14,11 @@
 	</ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="14.3.3" />
-        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="14.3.3" />
-        <PackageReference Include="uSync" Version="14.2.3" />
-        <PackageReference Include="uSync.Complete" Version="14.2.0" />
-        <PackageReference Include="Skybrud.Umbraco.Redirects" Version="14.0.0-beta001" />
+        <PackageReference Include="Umbraco.Cms" Version="15.3.0" />
+        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="15.3.0" />
+        <PackageReference Include="uSync" Version="15.1.6" />
+        <PackageReference Include="uSync.Complete" Version="15.1.6" />
+        <PackageReference Include="Skybrud.Umbraco.Redirects" Version="15.0.0-beta001" />
     </ItemGroup>
 
 
