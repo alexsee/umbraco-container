@@ -17,12 +17,11 @@ RUN dotnet restore
 RUN dotnet build
 RUN dotnet publish -c release -o /output --no-restore
 
-FROM mcr.microsoft.com/dotnet/aspnet:9.0
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled-extra
 WORKDIR /output
 COPY --from=build /output ./
 
 # Copy the wait-for-it.sh script as an mssql prerequisite
-COPY wait-for-it.sh /wait-for-it.sh
-RUN chmod +x /wait-for-it.sh
+COPY --chmod=755 wait-for-it.sh /wait-for-it.sh
 
 ENTRYPOINT ["dotnet", "UmbracoContainer.dll"]
