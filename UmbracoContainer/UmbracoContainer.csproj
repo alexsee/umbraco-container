@@ -16,8 +16,8 @@
     <ItemGroup>
         <PackageReference Include="Umbraco.Cms" Version="16.2.0" />
         <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="16.2.0" />
-        <PackageReference Include="uSync" Version="16.0.5" />
-        <PackageReference Include="uSync.Complete" Version="16.0.6" />
+        <PackageReference Include="uSync" Version="16.1.0" />
+        <PackageReference Include="uSync.Complete" Version="16.1.2" />
         <PackageReference Include="Skybrud.Umbraco.Redirects" Version="16.0.1" />
     </ItemGroup>
 
