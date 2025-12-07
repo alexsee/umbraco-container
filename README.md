@@ -18,7 +18,7 @@ services:
     user: app
     restart: always
     ports:
-      - "80:80"
+      - "8080:8080"
     volumes:
       - ./Logs:/output/umbraco/Logs
       - ./uSync:/output/uSync
@@ -31,3 +31,5 @@ services:
 ```
 
 **Note**: The docker-compose example maps the relevant subfolders of `wwwroot` to a local folder / docker volume individually. If you include the entire `wwwroot` directory, this can lead to upgrade issues since the container image itself contains the `wwwroot/umbraco` directory. Therefore, only include additional folders and files here such as the `css`, `media`, or `scripts` folders separately.
+
+**Note**: The docker image is supposed to run the application with the `app` user which needs access to the respective folders that are mounted. Use `sudo chown -R 1654:1654 ...` to change the ownership of the files accordingly.
