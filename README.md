@@ -15,8 +15,8 @@ services:
   umbraco-container:
     container_name: my-umbraco-container
     image: ghcr.io/alexsee/umbraco-container:latest
+    user: app
     restart: always
-    entrypoint: ["dotnet", "UmbracoContainer.dll", "--urls", "http://0.0.0.0"]
     ports:
       - "80:80"
     volumes:
