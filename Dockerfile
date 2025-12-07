@@ -18,7 +18,11 @@ RUN dotnet build -c release
 RUN dotnet publish -c release -o /output --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
-WORKDIR /output
-COPY --from=build /output ./
+USER $APP_UID
 
-ENTRYPOINT ["dotnet", "UmbracoContainer.dll"]
+WORKDIR /output
+COPY --from=build --chown=$APP_UID:$APP_UID /output ./
+
+RUN mkdir /output/umbraco
+
+ENTRYPOINT ["dotnet", "UmbracoContainer.dll", "--urls", "http://0.0.0.0:8080"]
