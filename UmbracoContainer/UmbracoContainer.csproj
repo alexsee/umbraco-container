@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <DefaultItemExcludes>$(DefaultItemExcludes);App_Plugins/**;</DefaultItemExcludes>
         <DefaultItemExcludes>$(DefaultItemExcludes);umbraco/**;</DefaultItemExcludes>
         <DefaultItemExcludes>$(DefaultItemExcludes);wwwroot/media/**;</DefaultItemExcludes>
@@ -14,11 +14,11 @@
 	</ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="16.4.1" />
-        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="16.4.1" />
-        <PackageReference Include="uSync" Version="16.1.0" />
-        <PackageReference Include="uSync.Complete" Version="16.1.2" />
-        <PackageReference Include="Skybrud.Umbraco.Redirects" Version="16.0.2" />
+        <PackageReference Include="Umbraco.Cms" Version="17.0.2" />
+        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="17.0.2" />
+        <PackageReference Include="uSync" Version="17.0.1" />
+        <PackageReference Include="uSync.Complete" Version="17.0.1" />
+        <PackageReference Include="Skybrud.Umbraco.Redirects" Version="17.0.0" />
     </ItemGroup>
 
 
@@ -41,12 +41,6 @@
 
     <PropertyGroup>
         <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
-    </PropertyGroup>
-
-    <!-- Set this to true if ModelsBuilder mode is not InMemoryAuto-->
-    <PropertyGroup>
-        <RazorCompileOnBuild>false</RazorCompileOnBuild>
-        <RazorCompileOnPublish>false</RazorCompileOnPublish>
     </PropertyGroup>
 
 </Project>
