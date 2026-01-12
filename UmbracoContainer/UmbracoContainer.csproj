@@ -14,8 +14,8 @@
 	</ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="17.0.2" />
-        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="17.0.2" />
+        <PackageReference Include="Umbraco.Cms" Version="17.1.0" />
+        <PackageReference Include="Umbraco.Cms.Persistence.Sqlite" Version="17.1.0" />
         <PackageReference Include="Umbraco.Cms.DevelopmentMode.Backoffice" Version="17.0.2" />
         <PackageReference Include="uSync" Version="17.0.1" />
         <PackageReference Include="uSync.Complete" Version="17.0.1" />
